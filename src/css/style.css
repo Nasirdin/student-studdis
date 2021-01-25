@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #1c1f2e;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.navbar {
+  margin: 57px 4px 4px 4px;
+}
+.navbar__item {
+  padding: 13px;
+}
+.navbar__item.active {
+  background: #242736;
+  border: 0.3px solid #FFFFFF;
+  border-radius: 12px;
+  position: relative;
+}
+.navbar__item.active:after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 3px;
+  background: #8E8E8E;
+  border-radius: 11px;
+  left: 13px;
+  bottom: 0;
+}
+.navbar__link {
+  display: block;
+}
+.navbar__link img {
+  width: 30px;
+  height: 30px;
+}
+
+.dark {
+  margin-bottom: 30px;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.home__navbar {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-right: 1px solid rgba(143, 143, 143, 0.3);
+}
+.home__nav {
+  text-align: center;
+}
+.home__logo {
+  display: block;
+}
+.home__main {
+  width: 100%;
+}
+.home__header {
+  padding: 24px 60px 24px 42px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(143, 143, 143, 0.3);
+  align-items: center;
+}
+.home__header .search {
+  width: 305px;
+  height: 50px;
+  background: #242736;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  color: #fff;
+}
+.home__content {
+  display: flex;
+  justify-content: space-between;
+}
+.home__block-1 {
+  padding: 55px 25px 41px 18px;
+  width: 100%;
+}
+.home__chat form {
+  background: #000;
+  padding: 3px;
+  bottom: 0;
+  width: 100%;
+}
+.home__chat form input {
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  margin-right: 0.5%;
+}
+.home__chat form button {
+  width: 9%;
+  background: #82e0ff;
+  border: none;
+  padding: 10px;
+}
+.home__chat form #messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.home__chat form #messages li {
+  padding: 5px 10px;
+}
+.home__chat form #messages li:nth-child(odd) {
+  background: #eee;
+}
+.home__block-2 {
+  padding: 55px 50px 41px;
+  border-left: 1px solid rgba(143, 143, 143, 0.3);
+  height: 100vh;
+}
+.home__time {
+  width: 500px;
+  height: 180px;
+  border-radius: 15px;
+  background: url(../img/time-bg.jpg) center/cover;
+  margin-bottom: 18px;
+  padding: 89px 35px 21px;
+}
+.home__time #timedisplay {
+  font-size: 45px;
+}
+.home__time #calenrad {
+  font-size: 15px;
+}
+.home__tabs {
+  text-align: center;
+}
+.home__tabs::before {
+  position: absolute;
+  content: "";
+  background: #242736;
+  border-radius: 11px;
+  width: 277px;
+  height: 42px;
+  z-index: -1;
+}
+.home__tabs label {
+  display: inline-block;
+  padding: 9px 45px;
+  font-size: 15px;
+  border-radius: 9px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  margin: 3px;
+  cursor: pointer;
+}
+.home__tabs label:first-child {
+  margin: 3px 0 3px 3px;
+}
+.home__tabs label:last-child {
+  margin: 3px 3px 3px 0;
+}
+.home__tabs input {
+  background: #242736;
+  border-radius: 11px;
+}
+.home__tabs input[type=radio] {
+  display: none;
+}
+.home__tabs input[type=radio]:checked + label {
+  background: #0020D7;
+}
+.home__tabs .tab {
+  display: none;
+  overflow: auto;
+  max-height: 480px;
+  padding-right: 21px;
+}
+.home__tabs .tab::-webkit-scrollbar {
+  width: 7px;
+}
+.home__tabs .tab::-webkit-scrollbar-thumb {
+  background-color: #373549;
+  border-radius: 10px;
+}
+.home__tabs #tab-btn-1:checked ~ #content-1,
+.home__tabs #tab-btn-2:checked ~ #content-2,
+.home__tabs #tab-btn-3:checked ~ #content-3 {
+  display: block;
+}
+.home__tabs .tasks {
+  margin-top: 22px;
+}
+.home__tabs .tasks__item {
+  padding: 32px 30px 25px 35px;
+  background: #242736;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.home__tabs .tasks__item .dop {
+  top: 32px;
+  right: 30px;
+  position: absolute;
+  background: #1D2030;
+  border: 0.3px solid #626060;
+  border-radius: 5px;
+  padding: 3px 12.5px 13.5px;
+}
+.home__tabs .tasks__title {
+  text-align: left;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 22.8px;
+}
+.home__tabs .tasks__date {
+  margin-top: 6px;
+  display: flex;
+  margin-bottom: 29px;
+  color: #c4c4c4;
+}
+.home__tabs .tasks__date .date {
+  margin: 0 6px;
+}
+.home__tabs .tasks__date .done {
+  border-left: 1px #c4c4c4 solid;
+  padding: 0 6px;
+  border-radius: 1px;
+  align-items: center;
+}
+.home__tabs .tasks__students {
+  display: flex;
+}
+.home__tabs .tasks__student {
+  width: 47px;
+  height: 47px;
+  border-radius: 9px;
+  margin-right: 8px;
+}
+.home__tabs .tasks .students {
+  width: 47px;
+  height: 47px;
+  background: #0020D7;
+  border-radius: 9px;
+  text-align: center;
+  padding: 13px;
+}
+.home__stud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__stud a {
+  color: #c4c4c4;
+}
+/*# sourceMappingURL=style.css.map */
